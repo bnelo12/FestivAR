@@ -36,3 +36,4 @@ for venue in venues:
             events.setdefault(venue_name, []).append(info)
 
 print(events['Summerhall'])
+print(venues)
