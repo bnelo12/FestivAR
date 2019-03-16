@@ -31,6 +31,11 @@ exports.getEvents = functions.https.onRequest((req, res) => {
                 events.push(eventInfo);
             }
         }
-        res.send(events);
+        events.sort(function(a, b) {
+            var Date1 = new Date(a.next_performance.start);
+            var Date2 = new Date(b.next_performance.start);
+            return Date1 - Date2;
+        });
+        res.send(events.slice(0, 3));
     });
 });
