@@ -35,5 +35,5 @@ for venue in venues:
             info['next_performance'] = event['performances'][0]
             events.setdefault(venue_name, []).append(info)
 
-print(events['Summerhall'])
 print(venues)
+print(url)
