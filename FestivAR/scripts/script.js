@@ -13,6 +13,7 @@ Note: Feel free to delete the contents of this script and start from scratch.
 const Diagnostics = require('Diagnostics');
 const Networking = require('Networking');
 const Scene = require('Scene');
+var Textures = require('Textures');
 // How to log values to the console
 Diagnostics.log('I am a console message logged from the script');
 
@@ -40,24 +41,31 @@ Networking.fetch(url, request).then(function(result) {
 }).then(function(json) {
     const stitle1 = Scene.root.find('stitle1');
     stitle1.text = json[0].title == null? "Unknown": json[0].title;
+    const srTex1 = Textures.get('srTexture1');
+    srTex1.url = 'https:' + Object.values(json[0].images)[1].versions["medium-640"].url; 
     const stitle2 = Scene.root.find('stitle2');
     stitle2.text = json[1].title == null? "Unknown": json[1].title;
+    const srTex2 = Textures.get('srTexture2');
+    srTex2.url = 'https:' + Object.values(json[1].images)[1].versions["medium-640"].url; 
     const stitle3 = Scene.root.find('stitle3');
     stitle3.text = json[2].title == null? "Unknown": json[2].title;
+    const srTex3 = Textures.get('srTexture3');
+    srTex3.url = 'https:' + Object.values(json[2].images)[1].versions["medium-640"].url; 
 
-    const sname1 = Scene.root.find('sname1');
-    sname1.text = json[0].artist == null? "Unknown": json[0].artist;
-    const sname2 = Scene.root.find('sname2');
-    sname2.text = json[1].artist == null? "Unknown": json[1].artist;
-    const sname3 = Scene.root.find('sname3');
-    sname3.text = json[2].artist == null? "Unknown": json[2].artist;
 
-    const sdta1 = Scene.root.find('sdta1');
-    sdta1.text = json[0].next_performance.start == null? "Unknown": json[0].next_performance.start;
-    const sdta2 = Scene.root.find('sdta2');
-    sdta2.text = json[1].next_performance.start == null? "Unknown": json[1].next_performance.start;
-    const sdta3 = Scene.root.find('sdta3');
-    sdta3.text = json[2].next_performance.start == null? "Unknown": json[2].next_performance.start;
+    // const sname1 = Scene.root.find('sname1');
+    // sname1.text = json[0].artist == null? "Unknown": json[0].artist;
+    // const sname2 = Scene.root.find('sname2');
+    // sname2.text = json[1].artist == null? "Unknown": json[1].artist;
+    // const sname3 = Scene.root.find('sname3');
+    // sname3.text = json[2].artist == null? "Unknown": json[2].artist;
+
+    // const sdta1 = Scene.root.find('sdta1');
+    // sdta1.text = json[0].next_performance.start == null? "Unknown": json[0].next_performance.start;
+    // const sdta2 = Scene.root.find('sdta2');
+    // sdta2.text = json[1].next_performance.start == null? "Unknown": json[1].next_performance.start;
+    // const sdta3 = Scene.root.find('sdta3');
+    // sdta3.text = json[2].next_performance.start == null? "Unknown": json[2].next_performance.start;
 
 }).catch(function(error) {
   // Log any errors that may have happened with the request
@@ -81,19 +89,26 @@ Networking.fetch(url, request).then(function(result) {
     const ptitle3 = Scene.root.find('ptitle3');
     ptitle3.text = json[2].title == null? "Unknown": json[2].title;
 
-    const pname1 = Scene.root.find('pname1');
-    pname1.text = json[0].artist == null? "Unknown": json[0].artist;
-    const pname2 = Scene.root.find('pname2');
-    pname2.text = json[1].artist == null? "Unknown": json[1].artist;
-    const pname3 = Scene.root.find('pname3');
-    pname3.text = json[2].artist == null? "Unknown": json[2].artist;
+    // const pname1 = Scene.root.find('pname1');
+    // pname1.text = json[0].artist == null? "Unknown": json[0].artist;
+    // const pname2 = Scene.root.find('pname2');
+    // pname2.text = json[1].artist == null? "Unknown": json[1].artist;
+    // const pname3 = Scene.root.find('pname3');
+    // pname3.text = json[2].artist == null? "Unknown": json[2].artist;
 
-    const pdta1 = Scene.root.find('pdta1');
-    pdta1.text = json[0].next_performance.start == null? "Unknown": json[0].next_performance.start;
-    const pdta2 = Scene.root.find('pdta2');
-    pdta2.text = json[1].next_performance.start == null? "Unknown": json[1].next_performance.start;
-    const pdta3 = Scene.root.find('pdta3');
-    pdta3.text = json[2].next_performance.start == null? "Unknown": json[2].next_performance.start;
+    // const pdta1 = Scene.root.find('pdta1');
+    // pdta1.text = json[0].next_performance.start == null? "Unknown": json[0].next_performance.start;
+    // const pdta2 = Scene.root.find('pdta2');
+    // pdta2.text = json[1].next_performance.start == null? "Unknown": json[1].next_performance.start;
+    // const pdta3 = Scene.root.find('pdta3');
+    // pdta3.text = json[2].next_performance.start == null? "Unknown": json[2].next_performance.start;
+
+    const prTex1 = Textures.get('prTexture1');
+    prTex1.url = 'https:' + Object.values(json[0].images)[1].versions["medium-640"].url;  
+    const prTex2 = Textures.get('prTexture2');
+    prTex2.url = 'https:' + Object.values(json[1].images)[1].versions["medium-640"].url; 
+    const prTex3 = Textures.get('prTexture3');
+    prTex3.url = 'https:' + Object.values(json[2].images)[1].versions["medium-640"].url; 
 
 }).catch(function(error) {
   // Log any errors that may have happened with the request
@@ -104,32 +119,37 @@ Networking.fetch(url, request).then(function(result) {
 // National Museum of Scotland
 //==============================================================================
 
-url = 'https://us-central1-festivar-802dc.cloudfunctions.net/getEvents?venue=National%20Museum%20of%20Scotland';
+url = 'https://us-central1-festivar-802dc.cloudfunctions.net/getEvents?venue=National Museum of Scotland';
 // Send the request to the url
 Networking.fetch(url, request).then(function(result) {
     return result.json()
 
 }).then(function(json) {
     const ntitle1 = Scene.root.find('ntitle1');
-    ntitle1.text = json[0].title == null? "Unknown": json[0].title;
+    ntitle1.text = json[0].title == null? "Unknown": json[0].title; 
     const ntitle2 = Scene.root.find('ntitle2');
     ntitle2.text = json[1].title == null? "Unknown": json[1].title;
     const ntitle3 = Scene.root.find('ntitle3');
-    ntitle3.text = json[2].title == null? "Unknown": json[2].title;
+    ntitle3.text = json[2]  == null? "": json[2].title;
 
-    const nname1 = Scene.root.find('nname1');
-    nname1.text = json[0].artist == null? "Unknown": json[0].artist;
-    const nname2 = Scene.root.find('nname2');
-    nname2.text = json[1].artist == null? "Unknown": json[1].artist;
-    const nname3 = Scene.root.find('nname3');
-    nname3.text = json[2].artist == null? "Unknown": json[2].artist;
+    const nrTex1 = Textures.get('nrTexture1');
+    nrTex1.url = 'https:' + Object.values(json[0].images)[1].versions["medium-640"].url;  
+    const nrTex2 = Textures.get('nrTexture2');
+    nrTex2.url = 'https:' + Object.values(json[1].images)[1].versions["medium-640"].url; 
 
-    const ndta1 = Scene.root.find('ndta1');
-    ndta1.text = json[0].next_performance.start == null? "Unknown": json[0].next_performance.start;
-    const ndta2 = Scene.root.find('ndta2');
-    ndta2.text = json[1].next_performance.start == null? "Unknown": json[1].next_performance.start;
-    const ndta3 = Scene.root.find('ndta3');
-    ndta3.text = json[2].next_performance.start == null? "Unknown": json[2].next_performance.start;
+    // const nname1 = Scene.root.find('nname1');
+    // nname1.text = json[0].artist == null? "Unknown": json[0].artist;
+    // const nname2 = Scene.root.find('nname2');
+    // nname2.text = json[1].artist == null? "Unknown": json[1].artist;
+    // const nname3 = Scene.root.find('nname3');
+    // nname3.text = json[2].artist == null? "Unknown": json[2].artist;
+
+    // const ndta1 = Scene.root.find('ndta1');
+    // ndta1.text = json[0].next_performance.start == null? "Unknown": json[0].next_performance.start;
+    // const ndta2 = Scene.root.find('ndta2');
+    // ndta2.text = json[1].next_performance.start == null? "Unknown": json[1].next_performance.start;
+    // const ndta3 = Scene.root.find('ndta3');
+    // ndta3.text = json[2].next_performance.start == null? "Unknown": json[2].next_performance.start;
 
 }).catch(function(error) {
   // Log any errors that may have happened with the request
@@ -140,7 +160,7 @@ Networking.fetch(url, request).then(function(result) {
 // City Art Centre
 //==============================================================================
 
-url = 'https://us-central1-festivar-802dc.cloudfunctions.net/getEvents?venue=City%20Art%20Centre';
+url = 'https://us-central1-festivar-802dc.cloudfunctions.net/getEvents?venue=City Art Centre';
 // Send the request to the url
 Networking.fetch(url, request).then(function(result) {
     return result.json()
@@ -153,30 +173,37 @@ Networking.fetch(url, request).then(function(result) {
     const ctitle3 = Scene.root.find('ctitle3');
     ctitle3.text = json[2].title == null? "Unknown": json[2].title;
 
-    const cname1 = Scene.root.find('cname1');
-    cname1.text = json[0].artist == null? "Unknown": json[0].artist;
-    const cname2 = Scene.root.find('cname2');
-    cname2.text = json[1].artist == null? "Unknown": json[1].artist;
-    const cname3 = Scene.root.find('cname3');
-    cname3.text = json[2].artist == null? "Unknown": json[2].artist;
+    const crTex1 = Textures.get('crTexture1');
+    crTex1.url = 'https:' + Object.values(json[0].images)[1].versions["medium-640"].url;  
+    const crTex2 = Textures.get('crTexture2');
+    crTex2.url = 'https:' + Object.values(json[1].images)[1].versions["medium-640"].url; 
+    const crTex3 = Textures.get('crTexture3');
+    crTex3.url = 'https:' + Object.values(json[2].images)[1].versions["medium-640"].url; 
 
-    const cdta1 = Scene.root.find('cdta1');
-    cdta1.text = json[0].next_performance.start == null? "Unknown": json[0].next_performance.start;
-    const cdta2 = Scene.root.find('cdta2');
-    cdta2.text = json[1].next_performance.start == null? "Unknown": json[1].next_performance.start;
-    const cdta3 = Scene.root.find('cdta3');
-    cdta3.text = json[2].next_performance.start == null? "Unknown": json[2].next_performance.start;
+    // const cname1 = Scene.root.find('cname1');
+    // cname1.text = json[0].artist == null? "Unknown": json[0].artist;
+    // const cname2 = Scene.root.find('cname2');
+    // cname2.text = json[1].artist == null? "Unknown": json[1].artist;
+    // const cname3 = Scene.root.find('cname3');
+    // cname3.text = json[2].artist == null? "Unknown": json[2].artist;
+
+    // const cdta1 = Scene.root.find('cdta1');
+    // cdta1.text = json[0].next_performance.start == null? "Unknown": json[0].next_performance.start;
+    // const cdta2 = Scene.root.find('cdta2');
+    // cdta2.text = json[1].next_performance.start == null? "Unknown": json[1].next_performance.start;
+    // const cdta3 = Scene.root.find('cdta3');
+    // cdta3.text = json[2].next_performance.start == null? "Unknown": json[2].next_performance.start;
 
 }).catch(function(error) {
   // Log any errors that may have happened with the request
     Diagnostics.log('Error - ' + error); 
 });
 
-//==============================================================================
-// The Patrick Geddes Centre
-//==============================================================================
+// //==============================================================================
+// // The Patrick Geddes Centre
+// //==============================================================================
 
-url = 'https://us-central1-festivar-802dc.cloudfunctions.net/getEvents?venue=The%20Patrick%20Geddes%20Centre';
+url = 'https://us-central1-festivar-802dc.cloudfunctions.net/getEvents?venue=The Patrick Geddes Centre';
 // Send the request to the url
 Networking.fetch(url, request).then(function(result) {
     return result.json()
@@ -186,22 +213,25 @@ Networking.fetch(url, request).then(function(result) {
     ttitle1.text = json[0].title == null? "Unknown": json[0].title;
     const ttitle2 = Scene.root.find('ttitle2');
     ttitle2.text = json[1].title == null? "Unknown": json[1].title;
-    const ttitle3 = Scene.root.find('ttitle3');
-    ttitle3.text = json[2].title == null? "Unknown": json[2].title;
 
-    const tname1 = Scene.root.find('tname1');
-    tname1.text = json[0].artist == null? "Unknown": json[0].artist;
-    const tname2 = Scene.root.find('tname2');
-    tname2.text = json[1].artist == null? "Unknown": json[1].artist;
-    const tname3 = Scene.root.find('tname3');
-    tname3.text = json[2].artist == null? "Unknown": json[2].artist;
+    const trTex1 = Textures.get('trTexture1');
+    trTex1.url = 'https:' + Object.values(json[0].images)[1].versions["medium-640"].url;  
+    const trTex2 = Textures.get('trTexture2');
+    trTex2.url = 'https:' + Object.values(json[1].images)[1].versions["medium-640"].url; 
 
-    const tdta1 = Scene.root.find('tdta1');
-    tdta1.text = json[0].next_performance.start == null? "Unknown": json[0].next_performance.start;
-    const tdta2 = Scene.root.find('tdta2');
-    tdta2.text = json[1].next_performance.start == null? "Unknown": json[1].next_performance.start;
-    const tdta3 = Scene.root.find('tdta3');
-    tdta3.text = json[2].next_performance.start == null? "Unknown": json[2].next_performance.start;
+    // const tname1 = Scene.root.find('tname1');
+    // tname1.text = json[0].artist == null? "Unknown": json[0].artist;
+    // const tname2 = Scene.root.find('tname2');
+    // tname2.text = json[1].artist == null? "Unknown": json[1].artist;
+    // const tname3 = Scene.root.find('tname3');
+    // tname3.text = json[2].artist == null? "Unknown": json[2].artist;
+
+    // const tdta1 = Scene.root.find('tdta1');
+    // tdta1.text = json[0].next_performance.start == null? "Unknown": json[0].next_performance.start;
+    // const tdta2 = Scene.root.find('tdta2');
+    // tdta2.text = json[1].next_performance.start == null? "Unknown": json[1].next_performance.start;
+    // const tdta3 = Scene.root.find('tdta3');
+    // tdta3.text = json[2].next_performance.start == null? "Unknown": json[2].next_performance.start;
 
 }).catch(function(error) {
   // Log any errors that may have happened with the request
