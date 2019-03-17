@@ -1,0 +1,468 @@
+{
+  "accessors": [
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 210,
+      "max": [
+        25.456239700317383,
+        3.8362400531768799,
+        0.0010199999669566751
+      ],
+      "min": [
+        -1.8028899431228638,
+        -18.993930816650391,
+        -26.77825927734375
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 2520,
+      "componentType": 5126,
+      "count": 210,
+      "max": [
+        0.99328213930130005,
+        0.97874397039413452,
+        0.56525880098342896
+      ],
+      "min": [
+        -0.99452060461044312,
+        -0.97522014379501343,
+        -0.55331951379776001
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 246,
+      "max": [
+        209
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 5040,
+      "componentType": 5126,
+      "count": 2640,
+      "max": [
+        3.7058799266815186,
+        3.7058699131011963,
+        7.8025598526000977
+      ],
+      "min": [
+        -3.7056500911712646,
+        -3.7056701183319092,
+        -0.71430999040603638
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 36720,
+      "componentType": 5126,
+      "count": 2640,
+      "max": [
+        0.99459075927734375,
+        0.99374151229858398,
+        0.99332493543624878
+      ],
+      "min": [
+        -0.99376511573791504,
+        -0.99376511573791504,
+        -0.99225592613220215
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 984,
+      "componentType": 5125,
+      "count": 10800,
+      "max": [
+        2639
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 68400,
+      "componentType": 5126,
+      "count": 720,
+      "max": [
+        3.6966800689697266,
+        3.6966800689697266,
+        7.8000001907348633
+      ],
+      "min": [
+        -3.6966800689697266,
+        -3.6966800689697266,
+        -0.70688998699188232
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 77040,
+      "componentType": 5126,
+      "count": 720,
+      "max": [
+        0.99295592308044434,
+        0.99036580324172974,
+        0.97272223234176636
+      ],
+      "min": [
+        -0.99376511573791504,
+        -0.99098169803619385,
+        -0.97278207540512085
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 44184,
+      "componentType": 5125,
+      "count": 2160,
+      "max": [
+        719
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 85680,
+      "componentType": 5126,
+      "count": 720,
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 94320,
+      "componentType": 5126,
+      "count": 720,
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 52824,
+      "componentType": 5125,
+      "count": 1140,
+      "max": [
+        719
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "sirkitree (https://sketchfab.com/sirkitree)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/models/7dab0b937e7d4a7c8d01ee6822c1a37c",
+      "title": "Balloon"
+    },
+    "generator": "Sketchfab-3.18.5",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 57384,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 102960,
+      "byteOffset": 57384,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 160344,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "Brown",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.58146256210000002,
+          0.16557557880000001,
+          0.042328164000000001,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "Purple",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.68976879120000001,
+          0.18419243399999999,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "Orange",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.99998325109999997,
+          0.48984822630000002,
+          0.0154791353,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "Black",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "ropes_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0
+          },
+          "indices": 2,
+          "material": 3,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "balloon_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 4,
+            "POSITION": 3
+          },
+          "indices": 5,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "balloon_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 7,
+            "POSITION": 6
+          },
+          "indices": 8,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "basket_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 10,
+            "POSITION": 9
+          },
+          "indices": 11,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3,
+        5,
+        8
+      ],
+      "name": "Root"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        -0.024860000000000004,
+        0.0030500000000000011,
+        -0.0079400000000000026,
+        0,
+        -0.0031200000000000008,
+        -0.026090000000000006,
+        -0.00023000000000000006,
+        0,
+        0.0079100000000000021,
+        -0.00072000000000000026,
+        -0.025050000000000006,
+        0,
+        0.31296000000000007,
+        -0.23787,
+        -1.2314299999999998,
+        1
+      ],
+      "name": "ropes"
+    },
+    {
+      "mesh": 0,
+      "name": "ropes_0"
+    },
+    {
+      "children": [
+        6,
+        7
+      ],
+      "name": "balloon"
+    },
+    {
+      "mesh": 1,
+      "name": "balloon_0"
+    },
+    {
+      "mesh": 2,
+      "name": "balloon_1"
+    },
+    {
+      "children": [
+        9
+      ],
+      "matrix": [
+        0.35571000000000003,
+        0,
+        0,
+        0,
+        0,
+        0.2666,
+        0,
+        0,
+        0,
+        0,
+        0.2666,
+        0,
+        -0.003200000000000001,
+        0,
+        -1.4904299999999999,
+        1
+      ],
+      "name": "basket"
+    },
+    {
+      "mesh": 3,
+      "name": "basket_0"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
+
